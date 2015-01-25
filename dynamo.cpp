@@ -6,15 +6,17 @@
 //#include "Headers.h"
 //#include "Headers.hpp"
 //#include "Source.cpp"
-
+#include "polygon.hpp"
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <iostream>
 
 
 int main()
-{	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-
+{	
+	dynamoCircle cow(30);
+	cow.Set_position(sf::Vector2f(20,20));
+	sf::RenderWindow window(sf::VideoMode(400, 400), "Dynamo");
 	while (window.isOpen())
 	{	sf::Event event;
 		while (window.pollEvent(event))
@@ -23,7 +25,7 @@ int main()
 			}
 		}
 		window.clear();
-		window.draw(shape);
+		cow.Draw_polygon(window);
 		window.display();
 	}
 

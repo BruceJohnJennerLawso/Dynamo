@@ -19,11 +19,11 @@ class dynamoCircle: public Polygon
 	dynamoCircle(float initial_radius);
 	
 	float Radius;
-	sf::Circle circle;
+	sf::CircleShape circle;
 	
 	float Get_radius();
 	void Set_radius(float new_radius);
-	void Draw_polygon(sf::RenderWindow &iwindow
+	void Draw_polygon(sf::RenderWindow &iwindow);
 	void Set_position(sf::Vector2f new_position);
 	~dynamoCircle();
 };

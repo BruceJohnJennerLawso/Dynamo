@@ -5,10 +5,15 @@
 //#include "Headers.h"
 //#include "Headers.hpp"
 //#include "Source.cpp"
-#include "polygon.cpp"
+#include <iostream>
+#include "polygon.hpp"
 
 void Polygon::Draw_polygon(sf::RenderWindow &iwindow)
 {	std::cout << "Bad call to Polygon::Draw_polygon(sf::RenderWindow &iwindow)" << std::endl;
+}
+
+void Polygon::Set_position(sf::Vector2f new_position)
+{	std::cout << "Bad call to Polygon::Set_position(sf::Vector2f new_position)" << std::endl;
 }
 
 // Dynamo circle ///////////////////////////////////////////////////////////////
