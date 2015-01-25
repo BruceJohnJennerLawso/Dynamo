@@ -5,18 +5,25 @@
 //#include "Headers.h"
 //#include "Headers.hpp"
 //#include "Source.cpp"
+#include "dynamics.hpp"
 #include <SFML/Graphics.hpp>
 
+
 class Polygon
-{	protected:
+{	public:
+	Polygon(sf::Vector2f init_position);
+	protected:
 	virtual void Draw_polygon(sf::RenderWindow &iwindow);
 	virtual void Set_position(sf::Vector2f new_position);
+	
+	
+	sf::Vector2f polygon_position;
 	// guess thats pretty much it
 };
 
 class dynamoCircle: public Polygon
 {	public:
-	dynamoCircle(float initial_radius);
+	dynamoCircle(float initial_radius, sf::Vector2f init_position);
 	
 	float Radius;
 	sf::CircleShape circle;

@@ -8,14 +8,29 @@
 //#include "Source.cpp"
 #include "polygon.hpp"
 #include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
 #include <iostream>
 
+int renderPolygons();
 
 int main()
 {	
-	dynamoCircle cow(30);
-	cow.Set_position(sf::Vector2f(20,20));
+	#ifdef WINDOWS
+		std::cout << "BAHAHA on WiNdOw$" << std::endl;
+		return -2;
+	#else
+		#ifdef LINUX
+			return renderPolygons();
+		#else
+			std::cout << "Reality is disintegrating (or we are on OSX)" << std::endl;
+			return -1;
+		#endif
+	#endif
+	
+}
+
+
+int renderPolygons()
+{	dynamoCircle cow(30, sf::Vector2f(20,20));
 	sf::RenderWindow window(sf::VideoMode(400, 400), "Dynamo");
 	while (window.isOpen())
 	{	sf::Event event;
@@ -31,9 +46,6 @@ int main()
 
 	return 0;
 }
-
-
-
 
 
 
