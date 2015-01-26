@@ -16,7 +16,7 @@ int main()
 {	
 	#ifdef WINDOWS
 		std::cout << "BAHAHA on WiNdOw$" << std::endl;
-		return -2;
+		return renderPolygons();
 	#else
 		#ifdef LINUX
 			return renderPolygons();
