@@ -9,4 +9,16 @@
 
 //#include "Headers.hpp"
 //#include "Source.cpp"
+#include "../polygon.hpp"
+// weird, but it works...
 
+class dynamoSquare: public Polygon
+{	public:
+	dynamoSquare(float initial_size, sf::Vector2f init_position);
+
+	sf::RectangleShape rect;
+	
+	void Draw_polygon(sf::RenderWindow &iwindow);
+	void Set_position(sf::Vector2f new_position);
+	~dynamoSquare();
+};

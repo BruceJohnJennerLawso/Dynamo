@@ -8,6 +8,10 @@
 #include "os.hpp"
 #include <SFML/Graphics.hpp>
 
+#ifdef WINDOWS
+	#define DLLCLBK extern "C" __declspec(dllexport)
+	// defined for msvc
+#endif
 
 class Polygon
 {	public:
@@ -20,6 +24,8 @@ class Polygon
 	sf::Vector2f polygon_position;
 	// guess thats pretty much it
 };
+
+DLLCLBK Polygon *modulePolygon(sf::Vector2f init_position);
 
 class dynamoCircle: public Polygon
 {	public:

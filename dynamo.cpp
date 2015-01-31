@@ -35,6 +35,7 @@ int renderPolygons()
 	#ifdef WINDOWS
 	// load up some library containing a shape definition, and use it to create
 	// some type of shape type
+	
 	#endif
 	
 	dynamoCircle cow(30, sf::Vector2f(20,20));
